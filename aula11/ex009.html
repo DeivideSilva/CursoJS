@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div#res{
+            padding: 10px;
+        }
+        input#txtnacio{
+            width: 80px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Nacionalidade</h1>
+    Informe o seu Pais:<input type="text" name="txtnacio" id="txtnacio">
+    <input type="button" name="bttesta" value="Validar" onclick="validar()">
+    <div id='res'></div>
+    <script>
+        function validar(){
+            var pais = 'Brasil'
+            var nacio = document.querySelector('input#txtnacio')
+            var res = document.querySelector('div#res')
+            var resul = nacio.value
+            
+         if(resul == 'Brasil' || resul == 'brasil'){
+             res.innerHTML = `Você é <strong>Brasileiro</strong>!`
+         }else{
+             res.innerHTML = `Você é um <strong>estrangeiro</strong> vivendo no ${pais}`
+         }
+        }
+        
+    </script>
+</body>
+</html>
